@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    </head>
+<body onload="Captcha('mainCaptcha');">
+
+    <nav>
+		<img class="logo" src="media/atenea.png">
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Inicio</a>
+			</li>
+
+			<li>
+				<a href="carta.html">Nuestra carta</a>
+			</li>
+			
+			<li>
+				<a href="cartaVieja.html">Carta anterior</a>
+			</li>
+			
+			<li>
+				<a href="#">Contacto</a>
+			</li>
+		</ul>
+
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+
+	</nav>
+
+	<div id="cartel">
+		<h1>Contactanos</h1>
+		<h3>Mandanos un mensaje y te responderemos a la brevedad.</h3>
+	</div>
+		
+		<div id="contact-box">
+
+			<div id="form-container">
+
+				<form action="">
+					<h4>INGRESE SU CONSULTA</h4>
+					<label for="name">Nombre:</label>
+					<input type="text">
+					
+					<label for="apellido">Apellido:</label>
+					<input type="text">
+					
+					<label for="mail">Mail:</label>
+					<input type="mail">
+					
+					<label for="message">Mensaje:</label>
+					<textarea cols="40" rows="10"></textarea>
+				</form>
+				
+				<div class="captcha_Container">
+					<h4>Captcha:</h4>
+                    <span id="captcha">Captcha text</span>
+                    <input id="confirm-captcha" type="text" name="text">
+                    <div>
+                        <button id="botonEnviar" type="submit">Enviar</button>
+                        <button id="botonActualizar" type="button">Actualizar</button>
+                    </div>
+                        <span id="output"></span>
+				</div>
+				
+			</div>
+
+			<div class="sep"></div>
+
+			<ul id="datos-utiles">
+				<h3>Datos utiles:</h3>
+				<h3>Llamanos:</h3>
+				<li>celular: 2236154139</li>
+				<li>Telefono: 494-1838</li>
+				<h3>Mail</h3>
+				<li>athenearesto@gmail.com</li>
+				<h3>Direccion:</h3>
+				<li>av.alvear 884 || Tandil - Provincia de Buenos Aires</li>
+			</ul>
+			
+
+		</div>
+</body>
+
+<script src="scripts/nav.js"></script>
+<script src="scripts/captcha.js"></script>
+</html>

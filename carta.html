@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+		<img class="logo" alt="media/atenea.png" src="media/atenea.png">
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Inicio</a>
+			</li>
+
+			<li>
+				<a href="carta.html">Nuestra carta</a>
+			</li>
+			
+			<li>
+				<a href="cartaVieja.html">Carta anterior</a>
+			</li>
+			
+			<li>
+				<a href="contacto.html">Contacto</a>
+			</li>
+		</ul>
+
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+
+	</nav>
+
+	<div id="Tabla-container">
+
+		<table id="tablaCarta">
+			<tbody id="bodyCarta"></tbody>
+			<tfoot>
+				<tr>
+					<td class="invisible"></td>
+					<td class="invisible">
+						<button class="btnPaginacion" id="anterior">Anterior</button>
+						<button class="btnPaginacion" id="siguiente">Siguiente</button>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		
+		<form action="" id="form" class="formPedido">
+			
+			<label for="Categoria">Categoria:</label>
+			<select id="Categoria" name="Categoria">
+				<option value="Entradas">Entradas</option>
+				<option value="Minutas">Minutas</option>
+				<option value="Pastas">Pastas</option>
+				<option value="Hamburguesas">Hamburguesas</option>
+				<option value="Bebidas">Bebidas</option>
+				<option value="Postres">Postres</option>
+			</select>
+			
+			<label for="Plato">Plato:</label>
+			<input type="text" name="Plato" placeholder="Plato a insertar en el menu" required>
+			
+			<label for="precio">Precio:</label>
+			<input type="number" name="Precio" placeholder="Precio del plato a insertar" required>
+			
+			<label for="Cantidad">Cantidad:</label>
+			<div>
+				<label for="uno">1</label>
+				<input checked="checked" type="radio" id="uno" name="Cantidad" value="1" >
+				<label for="dos">2</label>
+				<input type="radio" id="dos" name="Cantidad" value="2">
+				<label for="tres">3</label>
+				<input type="radio" id="tres" name="Cantidad" value="3" >
+			</div>
+			
+			<button id="BTN-enviar">Enviar</button>
+			<label for="filtros">Selecione un filtro</label>
+			
+            <p><select name="filtros" id="filtros">
+				<option value="Ninguno"> Ninguno</option>
+                <option value="Menor"> Precio menor a 1000</option>
+                <option value="Mayor"> Precio mayor a 1000</option>
+            </select></p>
+			<p><input type="button" id="enviarSelect" value="Aplicar filtro"></p>
+			
+		</form>
+	</div>
+
+<script src="scripts/nav.js"></script>
+<script src="scripts/tabla_api.js"></script>
+</body>
+</html>

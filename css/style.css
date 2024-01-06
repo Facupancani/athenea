@@ -1,0 +1,404 @@
+html{
+	background-image: url(../media/fondo1.png);
+	background-size: cover;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+body{
+	margin: 0px;
+	align-items: center;
+	justify-content: center;
+}
+
+/* NAV */
+
+nav{
+	display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 8vh;
+    background-color: #e5fafc;
+}
+nav img{
+	max-width: 25%;
+	margin-left: 3%;
+}
+.nav-links{
+	position: absolute;
+	right: 0;
+	width: 55%;
+	height: 80vh;
+	top: 7vh;
+	display: flex;
+	background-color: #e5fafc;
+	padding: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	transform: translate(100%);
+	transition: transform 0.5s ease-in;
+}
+.nav-links li{
+	list-style: none;
+	opacity: 0	;
+}
+.nav-links a{
+	color: black;
+	text-decoration: none;
+	letter-spacing: 2.5px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.nav-active{
+	transform: translate(0%);
+}
+.burger{
+	display: block;
+	cursor: pointer;
+	padding-right: 4%;
+}
+.burger div{
+	margin: 10px;
+	background-color: black;
+	width: 27px;
+	height: 1px;
+	right: 0;
+	transition: all 0.5s ease;
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translate(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translate(0px);
+	}
+}
+
+.toggle .line1{
+	transform: rotate(45deg) translate(0px, 15px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(-45deg) translate(0px, -15px);
+}
+
+
+@media only screen and (min-width: 768px){
+	nav{
+		position: relative;
+		justify-content: space-between;
+	}
+	nav .logo{
+		width: 20%;
+	}
+	.nav-links{
+		justify-content: space-evenly;
+        flex-direction: row;
+        height: auto;
+		position: static;
+		transform: none;
+	}
+	.nav-links li{
+		opacity: 100;
+    }
+	.burger{
+		display: none;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+	.nav-links{
+		width: 60%;
+	}
+	nav .logo{
+		width: 15% !important;
+	}
+}
+
+@media (min-width: 1366px){
+	.nav-links a{
+		font-size: 100%;
+	}
+	nav .logo{
+		width: 10%;
+	}
+}
+
+
+/* PAGINA DE INICIO */
+
+inicio #mensaje{
+	position: static;
+	color: #cbcbcb;
+	height: 30px;
+	text-align: center;
+	font-size: 8px;
+	margin: 70px;
+	margin-top: 30px;
+}
+
+inicio #wrapper{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-auto-rows: 150px;
+	grid-gap: 3px;
+}
+inicio #wrapper img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#wrapper .box1{
+	grid-row-start: span 2;
+	grid-column-start: span 2;
+}
+#wrapper .box2{
+	grid-column-start: span 2;
+}
+#wrapper .box5{
+	grid-column-start: span 2;
+}
+#wrapper .box6{
+	grid-column-start: span 2;
+}
+
+inicio footer{	
+	font-size: 10px;
+}
+
+inicio footer h4{
+	font-size: 8px;
+}
+
+inicio footer li{
+	list-style: none;
+	text-align: center;
+}
+
+inicio footer ul{
+	display: flex;
+	padding-inline-start: 0;
+	justify-content: space-between;
+	color: #cbcbcb;
+}
+
+inicio footer .sep{
+	margin: 10px;
+	background-color: #cbcbcb;
+	width: 2px;	
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	inicio #mensaje{
+		font-size: 12px;
+		margin-bottom: 10%;
+		margin-top: 6%;
+	}
+	footer ul{
+		font-size: 15px;
+	}
+	footer h4{
+		font-size: 12px;
+	}
+}
+
+
+@media screen and (min-width: 1024px){
+	footer ul{
+		font-size: 20px;
+	}
+	footer h4{
+		font-size: 12px;
+	}
+	.sep{
+		height: 230px;
+	}
+	inicio #mensaje{
+		font-size: 14px;
+		max-width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10%;
+		margin-top: 6%;
+	}
+}
+
+@media screen and (min-width: 1366px){
+	inicio #mensaje{
+		font-size: 18px !important;
+	}
+	footer ul{
+		font-size: 24px !important;
+	}
+	footer h4{
+		font-size: 16px !important;
+	}
+}
+
+
+/* PAGINA CARTA */
+#Tabla-container{
+	margin: 5%;
+}
+#tablaCarta{
+	color: #e5fafc;
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+}
+#tablaCarta tr, td, th{
+	font-size: 12px;
+}
+#tablaCarta .celdaHead{
+	color: #e5fafc;
+    border: 1px solid black;
+    background-color: rgb(67 77 95);
+    padding: 2%;
+    font-size: 12px;
+}
+#tablaCarta .celdaTabla{
+	border: 1px solid black;
+    background-color: rgb(67 77 95 / 54%);
+    text-align: left;
+}
+#tablaCarta .celda-resaltada{
+	color: black;
+	border: 1px solid black;
+	background-color: yellow;
+}
+
+.formPedido{
+	color: white;
+	font-size: 12px;
+	display: flex;
+    flex-direction: column;
+}
+.formPedido input::placeholder {
+	font-size: 10px;
+}
+
+.BtnEliminar, .BtnModificar{
+	background-color: #7a7a7a;
+    border: 0px;
+    font-weight: bold;
+    color: #374050;
+}
+.BtnEliminar:hover, .BtnModificar:hover{
+    background-color: #374050;
+	color: #7a7a7a;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* QUE ES CONTAINER */
+@media screen and (min-width: 1024px){
+	#Tabla-container{
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 3%;
+		margin: 4%;
+	}
+	.formPedido{
+		width: -webkit-fill-available;
+		justify-content: center;
+	}
+	#tablaCarta tr, td, th, .celdaHead, .formPedido{
+		font-size: 18px !important;
+	}
+	.formPedido input::placeholder, select {
+		font-size: 16px;
+	}
+}
+
+
+/* CONTACTO */
+
+#cartel{
+	background-color: #e5fafcbd;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1%;
+	margin-top: 3%;
+}
+#cartel h3{
+	margin-left: 2rem;
+}
+
+#contact-box{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e5fafcbd;
+    margin: 5%;
+	font-size: 1em;
+	color: white;
+}
+#contact-box form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#contact-box .sep{
+	margin: 10px;
+	background-color: white;
+	width: 2px;	
+}
+
+#form-container{
+	width: 35rem;
+}
+
+#datos-utiles{
+	display: flex;
+	flex-direction: column;
+	margin-top: -3%;
+}
+
+@media screen and (min-width: 1024px){
+	#contact-box{
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e5fafcbd;
+    margin: 5%;
+	padding: 3%;
+	font-size: 1em;
+	color: white;
+	}
+}
+
+/* CAPTCHA */
+
+.captcha_Container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 5%;
+}
+
+#err{
+	visibility: hidden;
+	color: red;
+}
